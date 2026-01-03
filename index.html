@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Football Training Tracker - Track Your Progress & Improve Your Game</title>
+  <meta name="title" content="Football Training Tracker - Track Your Progress & Improve Your Game" />
+  <meta name="description" content="The ultimate football training companion. Log workouts, track performance stats, visualize progress with charts, and achieve your football goals. Start free today!" />
+  <meta name="keywords" content="football training, workout tracker, fitness app, football stats, training log, performance tracking, sports training" />
+  <meta name="author" content="Football Tracker Team" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://footballtracker.app/" />
+  <meta property="og:title" content="Football Training Tracker - Track Your Progress & Improve Your Game" />
+  <meta property="og:description" content="The ultimate football training companion. Log workouts, track performance stats, visualize progress with charts, and achieve your football goals." />
+  <meta property="og:image" content="https://footballtracker.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Football Training Tracker" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://footballtracker.app/" />
+  <meta property="twitter:title" content="Football Training Tracker - Track Your Progress" />
+  <meta property="twitter:description" content="The ultimate football training companion. Log workouts, track stats, and achieve your goals." />
+  <meta property="twitter:image" content="https://footballtracker.app/twitter-image.png" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://footballtracker.app/" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#00a86b" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Football Training Tracker",
+    "applicationCategory": "SportsApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Track your football training progress with workout logs, performance stats, and progress charts.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "1250"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Toast Container for Notifications -->
+  <div class="toast-container" id="toast-container" role="alert" aria-live="polite"></div>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="logo">
+        <h1><span class="logo-icon" aria-hidden="true">⚽</span> Football Tracker</h1>
+      </div>
+      
+      <ul class="nav-links" id="nav-links" role="menubar">
+        <li role="none"><a href="#home" role="menuitem">Home</a></li>
+        <li role="none"><a href="#features" role="menuitem">Features</a></li>
+        <li role="none"><a href="#how-it-works" role="menuitem">How It Works</a></li>
+        <li role="none"><a href="#workout-logger" role="menuitem">Try It</a></li>
+        <li role="none"><a href="#testimonials" role="menuitem">Testimonials</a></li>
+        <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+        <li role="none">
+          <button 
+            class="theme-toggle" 
+            id="theme-toggle" 
+            type="button"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
+            <span class="icon-sun" aria-hidden="true">☀️</span>
+            <span class="icon-moon" aria-hidden="true">🌙</span>
+          </button>
+        </li>
+      </ul>
+      
+      <button 
+        class="hamburger" 
+        id="hamburger"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Track Your Football Training Progress</h1>
+        <p>Turn every session into data you can learn from. Improve faster, train smarter.</p>
+        <div class="hero-buttons">
+          <a href="#workout-logger" class="btn btn-primary btn-large">
+            Start Tracking Today
+          </a>
+          <a href="#features" class="btn btn-secondary btn-large">
+            Learn More
+          </a>
+        </div>
+        <div class="hero-stats" aria-label="Platform statistics">
+          <div class="stat-item">
+            <span class="stat-number" data-count="10000">10K+</span>
+            <span class="stat-label">Active Players</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="50000">50K+</span>
+            <span class="stat-label">Workouts Logged</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="98">98%</span>
+            <span class="stat-label">Satisfaction Rate</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features fade-in" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="features-title">Why Use Football Tracker?</h2>
+          <p>Everything you need to take your training to the next level</p>
+        </header>
+        
+        <div class="features-grid" role="list">
+          <article class="feature-card fade-in" role="listitem">
+            <div class="feature-icon" aria-hidden="true">📊</div>
+            <h3>Workout Logs</h3>
+            <p>Log every training session with detailed notes, duration, and performance metrics.</p>
+          </article>
+          
+          <article class="feature-card fade-in" role="listitem">
+            <div class="feature-icon" aria-hidden="true">⚡</div>
+            <h3>Performance Stats</h3>
+            <p>Track your speed, strength, stamina, and skills improvement over time.</p>
+          </article>
+          
+          <article class="feature-card fade-in" role="listitem">
+            <div class="feature-icon" aria-hidden="true">📈</div>
+            <h3>Progress Charts</h3>
+            <p>Visualize your improvement with beautiful, interactive charts and graphs.</p>
+          </article>
+          
+          <article class="feature-card fade-in" role="listitem">
+            <div class="feature-icon" aria-hidden="true">🎯</div>
+            <h3>Goal Tracking</h3>
+            <p>Set personal targets and milestones, then watch yourself crush them.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works fade-in" aria-labelledby="how-it-works-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="how-it-works-title">How It Works</h2>
+          <p>Get started in just three simple steps</p>
+        </header>
+        
+        <ol class="steps" role="list">
+          <li class="step fade-in">
+            <div class="step-number" aria-hidden="true">1</div>
+            <div class="step-content">
+              <h3>Create Your Account</h3>
+              <p>Sign up for free in seconds. No credit card required. Just your email and you're ready to go.</p>
+            </div>
+          </li>
+          
+          <li class="step fade-in">
+            <div class="step-number" aria-hidden="true">2</div>
+            <div class="step-content">
+              <h3>Log Your Workouts</h3>
+              <p>Record each training session with type, duration, intensity, and notes. It takes less than 30 seconds.</p>
+            </div>
+          </li>
+          
+          <li class="step fade-in">
+            <div class="step-number" aria-hidden="true">3</div>
+            <div class="step-content">
+              <h3>Track Your Progress</h3>
+              <p>Watch your stats grow over time. See clear visualizations of how you're improving week by week.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Workout Logger Section (Interactive Demo) -->
+    <section id="workout-logger" class="workout-logger fade-in" aria-labelledby="workout-logger-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="workout-logger-title">Try It Now</h2>
+          <p>Log a workout right here and see how easy it is</p>
+        </header>
+        
+        <div class="logger-wrapper">
+          <!-- Workout Form -->
+          <div class="workout-form-card">
+            <h3><span aria-hidden="true">➕</span> Log New Workout</h3>
+            <form id="workout-form" class="workout-form" novalidate>
+              <div class="form-group">
+                <label for="workout-type">Workout Type</label>
+                <select id="workout-type" name="type" required>
+                  <option value="">Select type...</option>
+                  <option value="cardio">Cardio / Running</option>
+                  <option value="strength">Strength Training</option>
+                  <option value="skills">Ball Skills / Drills</option>
+                  <option value="match">Match / Scrimmage</option>
+                  <option value="recovery">Recovery / Stretching</option>
+                </select>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="workout-duration">Duration (min)</label>
+                  <input 
+                    type="number" 
+                    id="workout-duration" 
+                    name="duration" 
+                    min="1" 
+                    max="300" 
+                    placeholder="45"
+                    required 
+                  />
+                </div>
+                
+                <div class="form-group">
+                  <label for="workout-intensity">Intensity (1-10)</label>
+                  <input 
+                    type="number" 
+                    id="workout-intensity" 
+                    name="intensity" 
+                    min="1" 
+                    max="10" 
+                    placeholder="7"
+                    required 
+                  />
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="workout-notes">Notes (optional)</label>
+                <textarea 
+                  id="workout-notes" 
+                  name="notes" 
+                  rows="3" 
+                  placeholder="How did you feel? What did you focus on?"
+                ></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span aria-hidden="true">💾</span> Save Workout
+              </button>
+            </form>
+          </div>
+          
+          <!-- Workout History -->
+          <div class="workout-history">
+            <h3><span aria-hidden="true">📋</span> Recent Workouts</h3>
+            <div id="workout-list" class="workout-list" aria-live="polite">
+              <div class="empty-state">
+                <div class="empty-state-icon" aria-hidden="true">🏃</div>
+                <p>No workouts yet. Log your first one!</p>
+              </div>
+            </div>
+            <div style="margin-top: var(--spacing-lg); text-align: center;">
+              <button type="button" id="export-btn" class="btn btn-secondary" style="border-color: var(--primary-color); color: var(--primary-color);">
+                <span aria-hidden="true">📥</span> Export to CSV
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials fade-in" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="testimonials-title">What Players Say</h2>
+          <p>Join thousands of footballers improving their game</p>
+        </header>
+        
+        <div class="testimonials-container" role="list">
+          <article class="testimonial-card fade-in" role="listitem">
+            <blockquote>
+              "This app helped me come back stronger after my injury. I could track my recovery progress and see real improvements week by week."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">AA</div>
+              <div class="author-info">
+                <h4>Amir A.</h4>
+                <p class="role">Amateur Footballer</p>
+              </div>
+            </div>
+          </article>
+          
+          <article class="testimonial-card fade-in" role="listitem">
+            <blockquote>
+              "Perfect for tracking my academy players. I can monitor each player's progress and adjust training programs accordingly."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">CR</div>
+              <div class="author-info">
+                <h4>Coach Reza</h4>
+                <p class="role">Youth Academy Coach</p>
+              </div>
+            </div>
+          </article>
+          
+          <article class="testimonial-card fade-in" role="listitem">
+            <blockquote>
+              "Seeing my progress visualized keeps me motivated every single week. The charts are amazing and really show how far I've come."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">AM</div>
+              <div class="author-info">
+                <h4>Ali M.</h4>
+                <p class="role">Midfielder, Semi-Pro</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="cta-section fade-in" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title">Ready to Level Up Your Game?</h2>
+        <p>Join over 10,000 players already improving with Football Tracker.</p>
+        <a href="#workout-logger" class="btn btn-primary btn-large">
+          Get Started Free
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact fade-in" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="contact-title">Get in Touch</h2>
+          <p>Have questions? We'd love to hear from you</p>
+        </header>
+        
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">📧</div>
+              <div>
+                <strong>Email</strong>
+                <p>hello@footballtracker.app</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">📍</div>
+              <div>
+                <strong>Location</strong>
+                <p>Remote-first, Worldwide</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">⏰</div>
+              <div>
+                <strong>Response Time</strong>
+                <p>Within 24 hours</p>
+              </div>
+            </div>
+            
+            <div class="social-links" aria-label="Social media links">
+              <a 
+                href="https://twitter.com/footballtracker" 
+                class="social-icon" 
+                aria-label="Follow us on Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                𝕏
+              </a>
+              <a 
+                href="https://instagram.com/footballtracker" 
+                class="social-icon" 
+                aria-label="Follow us on Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📷
+              </a>
+              <a 
+                href="https://discord.gg/footballtracker" 
+                class="social-icon" 
+                aria-label="Join our Discord community"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                💬
+              </a>
+            </div>
+          </div>
+          
+          <div class="contact-form-wrapper">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name">Your Name</label>
+                <input 
+                  type="text" 
+                  id="contact-name" 
+                  name="name" 
+                  autocomplete="name"
+                  placeholder="John Doe"
+                  required 
+                />
+              </div>
+              
+              <div class="form-group">
+                <label for="contact-email">Your Email</label>
+                <input 
+                  type="email" 
+                  id="contact-email" 
+                  name="email" 
+                  autocomplete="email"
+                  placeholder="john@example.com"
+                  required 
+                />
+              </div>
+              
+              <div class="form-group">
+                <label for="contact-message">Your Message</label>
+                <textarea 
+                  id="contact-message" 
+                  name="message" 
+                  rows="5" 
+                  placeholder="How can we help you?"
+                  required
+                ></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span aria-hidden="true">📤</span> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>⚽ Football Tracker</h4>
+          <p>The ultimate training companion for footballers who want to improve their game through data-driven insights.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#cookies">Cookie Policy</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#help">Help Center</a></li>
+            <li><a href="mailto:support@footballtracker.app">Email Support</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Football Training Tracker. All rights reserved.</p>
+        <p>Made with ❤️ for footballers worldwide</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+  
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('Service Worker registered'))
+          .catch(err => console.log('Service Worker registration failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>

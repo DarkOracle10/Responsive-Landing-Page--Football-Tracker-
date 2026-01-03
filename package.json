@@ -1,0 +1,57 @@
+{
+  "name": "football-training-tracker",
+  "version": "2.0.0",
+  "description": "A modern, responsive landing page for a football training tracking application",
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "keywords": [
+    "football",
+    "training",
+    "tracker",
+    "fitness",
+    "sports",
+    "landing-page",
+    "pwa",
+    "responsive"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/football-tracker.git"
+  },
+  "homepage": "https://your-username.netlify.app",
+  "bugs": {
+    "url": "https://github.com/your-username/football-tracker/issues"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint:css": "stylelint \"**/*.css\" --fix",
+    "lint:js": "eslint \"**/*.js\" --fix",
+    "lint": "npm run lint:css && npm run lint:js",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "serve": "npx serve .",
+    "lighthouse": "lighthouse http://localhost:5173 --output html --output-path ./lighthouse-report.html",
+    "test": "echo \"No tests configured\" && exit 0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "eslint": "^8.56.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "prettier": "^3.2.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
