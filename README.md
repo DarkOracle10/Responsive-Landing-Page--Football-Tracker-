@@ -224,7 +224,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Icons: Native emoji (no external dependencies)
 - Fonts: System font stack for optimal performance
 
----
+-----
 
 <p align="center">
   Made with ❤️ for footballers worldwide
