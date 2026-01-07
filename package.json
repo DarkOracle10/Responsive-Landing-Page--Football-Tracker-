@@ -25,7 +25,7 @@
     "url": "https://github.com/your-username/football-tracker/issues"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "lint:css": "stylelint \"**/*.css\" --fix",

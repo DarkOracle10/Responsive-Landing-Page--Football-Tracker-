@@ -38,3 +38,8 @@ lighthouse-report.html
 # Cache
 .cache/
 .parcel-cache/
+
+# Portfolio generation
+generate_portfolio_landing_page.py
+Amir_Aeiny_Portfolio_Football_Tracker_Landing_Page.pdf
+*.pdf

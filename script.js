@@ -51,7 +51,7 @@ const formatDate = (date) => {
  * Generate unique ID
  * @returns {string}
  */
-const generateId = () => `workout_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+const generateId = () => `workout_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`;
 
 /**
  * Debounce function for performance
@@ -92,7 +92,9 @@ const Toast = {
    * @param {number} duration - Duration in ms
    */
   show(message, type = 'success', duration = 4000) {
-    if (!this.container) this.init();
+    if (!this.container) {
+      this.init();
+    }
     
     const toast = document.createElement('div');
     toast.className = `toast ${type}`;
@@ -224,7 +226,9 @@ const Navigation = {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener('click', (e) => {
         const href = anchor.getAttribute('href');
-        if (href === '#') return;
+        if (href === '#') {
+          return;
+        }
         
         e.preventDefault();
         const target = document.querySelector(href);
@@ -313,7 +317,9 @@ const ScrollAnimations = {
 const StatsCounter = {
   init() {
     const stats = document.querySelectorAll('.stat-number[data-count]');
-    if (!stats.length) return;
+    if (!stats.length) {
+      return;
+    }
     
     const observer = new IntersectionObserver(
       (entries) => {
@@ -392,7 +398,9 @@ const WorkoutLogger = {
   
   setupForm() {
     const form = getElement('workout-form');
-    if (!form) return;
+    if (!form) {
+      return;
+    }
     
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -442,7 +450,9 @@ const WorkoutLogger = {
   
   renderWorkouts() {
     const list = getElement('workout-list');
-    if (!list) return;
+    if (!list) {
+      return;
+    }
     
     if (this.workouts.length === 0) {
       list.innerHTML = `
@@ -484,7 +494,9 @@ const WorkoutLogger = {
   
   setupExport() {
     const exportBtn = getElement('export-btn');
-    if (!exportBtn) return;
+    if (!exportBtn) {
+      return;
+    }
     
     exportBtn.addEventListener('click', () => {
       if (this.workouts.length === 0) {
@@ -527,7 +539,9 @@ window.WorkoutLogger = WorkoutLogger;
 const ContactForm = {
   init() {
     const form = getElement('contact-form');
-    if (!form) return;
+    if (!form) {
+      return;
+    }
     
     form.addEventListener('submit', async (e) => {
       e.preventDefault();

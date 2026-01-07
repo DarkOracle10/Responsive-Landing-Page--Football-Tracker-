@@ -216,8 +216,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Your Name**
 - Portfolio: [yourportfolio.com](https://yourportfolio.com)
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [Your Name](https://linkedin.com/in/your-profile)
+- GitHub: [@DarkOrace10](https://github.com/DarkOrace10)
+- LinkedIn: [Your Name](https://www.linkedin.com/in/amir-aeiny-dev)
 
 ## 🙏 Acknowledgments
 
