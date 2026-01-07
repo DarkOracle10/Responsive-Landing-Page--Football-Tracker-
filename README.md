@@ -216,7 +216,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Your Name**
 - GitHub: [@DarkOrace10](https://github.com/DarkOrace10)
-- LinkedIn: [Your Name](https://www.linkedin.com/in/amir-aeiny-dev)
+- LinkedIn: [Amir Aeiny](https://www.linkedin.com/in/amir-aeiny-dev)
 
 ## 🙏 Acknowledgments
 
