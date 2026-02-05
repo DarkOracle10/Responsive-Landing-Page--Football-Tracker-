@@ -1,235 +1,176 @@
 # ⚽ Football Training Tracker
 
-A modern, responsive landing page for a football training tracking application. Built with vanilla HTML, CSS, and JavaScript - demonstrating clean code practices, accessibility, and performance optimization.
+> A Progressive Web App (PWA) for managing football training sessions with offline support, dark mode, and full accessibility compliance.
 
-![Football Tracker Preview](https://via.placeholder.com/1200x630/00a86b/ffffff?text=Football+Training+Tracker)
-
-## 🌐 Live Demo
-
-**[View Live Demo](https://your-username.netlify.app)**
+[![Live Demo](https://img.shields.io/badge/demo-live-success?style=for-the-badge)](https://darkoracle10.github.io/Responsive-Landing-Page--Football-Tracker-/)
+[![Lighthouse](https://img.shields.io/badge/lighthouse-95%2B-brightgreen?style=for-the-badge)](https://github.com/GoogleChrome/lighthouse)
+[![WCAG 2.1 AA](https://img.shields.io/badge/WCAG-2.1%20AA-blue?style=for-the-badge)](https://www.w3.org/WAI/WCAG21/quickref/)
 
 ## ✨ Features
 
-### Core Functionality
-- 📊 **Interactive Workout Logger** - Log workouts with type, duration, intensity, and notes
-- 💾 **LocalStorage Persistence** - Data persists across sessions
-- 📥 **CSV Export** - Export your workout history to CSV
-- 🌙 **Dark Mode** - System-aware theme with manual toggle
-- 📱 **Fully Responsive** - Mobile-first design with 4 breakpoints
+### Progressive Web App
+- 📱 **Installable** - Add to home screen on mobile/desktop
+- 🔌 **Offline Support** - Full functionality without internet
+- ⚡ **Fast Loading** - Service worker caching
+- 📊 **Local Storage** - Data persists between sessions
 
-### Technical Highlights
-- ♿ **WCAG 2.1 AA Accessible** - Proper ARIA labels, keyboard navigation, focus management
-- 🚀 **Progressive Web App** - Installable, works offline with service worker
-- 🔍 **SEO Optimized** - Meta tags, Open Graph, Twitter Cards, JSON-LD structured data
-- ⚡ **Performance Optimized** - Intersection Observer for animations, debounced scroll handlers
-- 🎨 **CSS Custom Properties** - Design token system for easy theming
+### Accessibility & Performance
+- ♿ **WCAG 2.1 AA Compliant** - Screen reader optimized
+- 🚀 **Lighthouse 95+** - High performance scores
+- 🌓 **Dark Mode** - System-aware with manual toggle
+- 📱 **Responsive Design** - Works on all screen sizes
+
+### Training Features
+- ✅ Log training sessions with date/time
+- 📝 Track exercises, sets, and reps
+- 💾 Export data to CSV
+- 📈 View training history
+- 🏃‍♂️ Recovery tracking
+- ⚽ Position-specific exercises
+
+## 🎬 Demo
+
+### Screenshots
+> 📸 Coming soon - Desktop and mobile screenshots
+
+### Try It Live
+**[Open Live Demo →](https://darkoracle10.github.io/Responsive-Landing-Page--Football-Tracker-/)**
+
+Or run locally:
+```bash
+# Clone repository
+git clone https://github.com/DarkOracle10/Responsive-Landing-Page--Football-Tracker-.git
+cd Responsive-Landing-Page--Football-Tracker-
+
+# Open in browser
+# Option 1: Direct file
+open index.html  # macOS
+start index.html  # Windows
+
+# Option 2: Local server (recommended for PWA features)
+python -m http.server 8000
+# Visit: http://localhost:8000
+```
+
+## 📲 Installation as PWA
+
+### Desktop (Chrome/Edge)
+1. Visit the live demo
+2. Click install icon (⊕) in address bar
+3. Click "Install"
+
+### Mobile (iOS/Android)
+1. Open in Safari/Chrome
+2. Tap share button
+3. Select "Add to Home Screen"
 
 ## 🛠️ Tech Stack
 
-| Category | Technology |
-|----------|------------|
-| **Markup** | HTML5, Semantic Elements |
-| **Styling** | CSS3, Custom Properties, Flexbox, Grid |
-| **Scripting** | Vanilla JavaScript (ES6+) |
-| **PWA** | Service Worker, Web App Manifest |
-| **Hosting** | Netlify |
+- **HTML5** - Semantic markup
+- **CSS3** - Grid, Flexbox, Custom Properties
+- **JavaScript ES6+** - Vanilla JS, no frameworks
+- **Service Workers** - Offline functionality
+- **LocalStorage API** - Data persistence
+- **PWA Manifest** - Installation metadata
 
 ## 📁 Project Structure
 
 ```
-football-tracker/
-├── index.html          # Main HTML file with semantic structure
-├── style.css           # Complete stylesheet with design system
-├── script.js           # Interactive functionality
+.
+├── index.html           # Main HTML structure
+├── css/
+│   ├── style.css       # Main styles
+│   └── dark-mode.css   # Dark theme styles
+├── js/
+│   ├── app.js          # Main application logic
+│   ├── storage.js      # LocalStorage handling
+│   └── sw.js           # Service worker
 ├── manifest.json       # PWA manifest
-├── sw.js              # Service worker for offline support
-├── package.json        # Project metadata & scripts
-├── vite.config.js      # Vite configuration (optional)
-├── netlify.toml        # Netlify deployment config
-└── README.md           # Project documentation
+└── icons/              # App icons (various sizes)
 ```
 
-## 🚀 Getting Started
+## 🎯 Features in Detail
 
-### Prerequisites
-- Node.js 18+ (for development server)
-- Modern web browser
+### Training Session Logging
+- Date picker with default to today
+- Exercise type dropdown
+- Sets, reps, weight tracking
+- Notes field for additional details
+- Save to local storage
 
-### Installation
+### Data Export
+- Export all sessions to CSV
+- Import CSV to restore data
+- Formatted date/time in exports
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/football-tracker.git
-   cd football-tracker
-   ```
+### Dark Mode
+- Automatic system preference detection
+- Manual toggle available
+- Smooth transitions
+- Separate stylesheet for maintainability
 
-2. **Install dependencies** (optional, for dev server)
-   ```bash
-   npm install
-   ```
-
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open in browser**
-   ```
-   http://localhost:5173
-   ```
-
-### Without Node.js
-Simply open `index.html` in your browser - no build step required!
-
-## 📊 Lighthouse Scores
-
-| Category | Score |
-|----------|-------|
-| Performance | 95+ |
-| Accessibility | 100 |
-| Best Practices | 100 |
-| SEO | 100 |
-| PWA | ✅ |
-
-## 🎨 Design System
-
-### Color Palette
-
-| Variable | Value | Usage |
-|----------|-------|-------|
-| `--primary-color` | `#00a86b` | Main brand color |
-| `--secondary-color` | `#003d82` | Accent/gradients |
-| `--accent-color` | `#ffd700` | CTAs, highlights |
-
-### Typography
-- **Font Family**: Segoe UI, -apple-system, BlinkMacSystemFont, Roboto
-- **Scale**: 0.75rem to 3.5rem (responsive)
-
-### Spacing Scale
-```css
---spacing-xs: 0.25rem;
---spacing-sm: 0.5rem;
---spacing-md: 1rem;
---spacing-lg: 1.5rem;
---spacing-xl: 2rem;
---spacing-2xl: 3rem;
---spacing-3xl: 4rem;
-```
-
-## 🔧 Customization
-
-### Changing Colors
-Edit the CSS custom properties in `style.css`:
-```css
-:root {
-  --primary-color: #your-color;
-  --secondary-color: #your-color;
-}
-```
-
-### Adding Workout Types
-Edit the `WORKOUT_TYPES` object in `script.js`:
-```javascript
-const WORKOUT_TYPES = {
-  your_type: { label: 'Your Label', icon: '🎯' },
-};
-```
-
-## 📱 PWA Installation
-
-### Desktop (Chrome/Edge)
-1. Visit the live demo
-2. Click the install icon in the address bar
-3. Confirm installation
-
-### Mobile (Android)
-1. Visit the live demo in Chrome
-2. Tap "Add to Home Screen" prompt
-3. Or use browser menu → "Install app"
-
-### iOS
-1. Visit in Safari
-2. Tap Share button
-3. Select "Add to Home Screen"
-
-## 🚢 Deployment
-
-### Netlify (Recommended)
-
-1. **Connect Repository**
-   - Go to [Netlify](https://netlify.com)
-   - Click "New site from Git"
-   - Connect your GitHub repo
-
-2. **Configure Build**
-   - Build command: `npm run build` (or leave empty)
-   - Publish directory: `.` or `dist`
-
-3. **Deploy**
-   - Push to main branch triggers auto-deploy
-
-### Manual Deploy
-```bash
-# Install Netlify CLI
-npm install -g netlify-cli
-
-# Deploy
-netlify deploy --prod
-```
-
-### Other Platforms
-- **Vercel**: `vercel --prod`
-- **GitHub Pages**: Push to `gh-pages` branch
-- **Cloudflare Pages**: Connect repository in dashboard
+### Accessibility
+- Keyboard navigation support
+- ARIA labels on all interactive elements
+- High contrast ratios (WCAG AA)
+- Screen reader tested
+- Focus indicators
 
 ## 🧪 Testing
 
-### Manual Testing Checklist
-- [ ] Responsive design (320px - 1920px)
-- [ ] Dark mode toggle
-- [ ] Keyboard navigation (Tab, Enter, Escape)
-- [ ] Screen reader compatibility
-- [ ] Form validation
-- [ ] Workout CRUD operations
-- [ ] CSV export functionality
-- [ ] Offline functionality
-
 ### Lighthouse Audit
 ```bash
-npm install -g lighthouse
-lighthouse https://your-site.netlify.app --view
+# Run Lighthouse
+npx lighthouse http://localhost:8000 --view
 ```
+
+**Current Scores:**
+
+- 🟢 Performance: 95+
+- 🟢 Accessibility: 100
+- 🟢 Best Practices: 95+
+- 🟢 SEO: 100
+- 🟢 PWA: ✓ Installable
+
+### Accessibility Testing
+Tested with:
+
+- NVDA (Windows)
+- VoiceOver (macOS/iOS)
+- TalkBack (Android)
+- WAVE browser extension
+
+## 📱 Browser Support
+
+- ✅ Chrome 90+
+- ✅ Firefox 88+
+- ✅ Safari 14+
+- ✅ Edge 90+
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Contributions welcome! Areas for improvement:
 
-## 📝 License
+- [ ] Add charts/visualization for training data
+- [ ] Exercise video/gif library
+- [ ] Social sharing features
+- [ ] Training program templates
+- [ ] REST API integration
+- [ ] User authentication
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 📄 License
+
+MIT License - See LICENSE file
 
 ## 👤 Author
 
-**Your Name**
-- GitHub: [@DarkOrace10](https://github.com/DarkOrace10)
-- LinkedIn: [Amir Aeiny](https://www.linkedin.com/in/amir-aeiny-dev)
+**Amir Aeiny**
 
-## 🙏 Acknowledgments
+- GitHub: @DarkOracle10
+- LinkedIn: amir-aeiny-dev
+- Email: amir.aeiny10@gmail.com
 
-- Design inspiration from modern SaaS landing pages
-- Icons: Native emoji (no external dependencies)
-- Fonts: System font stack for optimal performance
+---
 
------
-
-<p align="center">
-  Made with ❤️ for footballers worldwide
-</p>
-
-<p align="center">
-  <a href="#-football-training-tracker">Back to top ↑</a>
-</p>
+⭐ Star this repo if you find it useful!
